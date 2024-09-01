@@ -75,40 +75,10 @@ h2{
     --font: 'Libre Franklin';
 }
 
-@font-face {
-    font-family: 'Libre Caslon Text';
-    font-style: normal;
-    src: url("/assets/fonts/LibreCaslonText-Regular.woff2") format('woff2');
-    font-display: swap;
-}
-@font-face {
-    font-family: 'Libre Caslon Text';
-    font-style:normal;
-    font-weight: bold;
-    src: url("/assets/fonts/LibreCaslonText-Bold.woff2") format('woff2');
-    font-display: swap;
-}
-@font-face {
-    font-family: 'Libre Franklin';
-    font-style:normal;
-    font-weight: 400;
-    src: url("/assets/fonts/LibreFranklin-Regular.woff2") format('woff2');
-    font-display: swap;
-}
-@font-face {
-    font-family: 'Libre Franklin';
-    font-style:normal;
-    font-weight: 500;
-    src: url("/assets/fonts/LibreFranklin-Medium.woff2") format('woff2');
-    font-display: swap;
-}
-@font-face {
-    font-family: 'Libre Franklin';
-    font-style:normal;
-    font-weight: 600;
-    src: url("/assets/fonts/LibreFranklin-SemiBold.woff2") format('woff2');
-    font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,600;1,600&display=swap');
+
 
 /**Fin general**/
 
