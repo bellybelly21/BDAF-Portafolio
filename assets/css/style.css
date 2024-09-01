@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,600;1,600&display=swap');
 
 
 /**General**/
@@ -74,11 +77,6 @@ h2{
     --gray: #4A4A4A;
     --font: 'Libre Franklin';
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,600;1,600&display=swap');
-
 
 /**Fin general**/
 
