@@ -3,11 +3,474 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets\img\apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets\img\favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets\img\favicon-16x16.png">
+  <link rel="manifest" href="assets\img\site.webmanifest">
     <title>Sybella Sandoval | Diseñadora UX/UI Frontend Developer</title>
-    <link rel="stylesheet" href="assets\style.css">
+    <!-- core styles loaded on all devices -->
+    <link rel="preload" href="assets\css\style.css" as="style">
+    <link rel="stylesheet" href="assets\css\style.css">
 </head>
 <body>
-<h1>Hola</h1>
+  <header class="navbar flex">
+    <div class="navbar_brand flex">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="55" height="40" viewBox="0 0 55 40" fill="none">
+              <path d="M13.5615 3.89999L11.5033 5.14296C6.12349 8.39188 5.91135 16.1184 11.1048 19.6576V19.6576C15.9721 22.9746 16.1581 30.0857 11.4709 33.6526L8.25491 36.1" stroke="#664FEC" stroke-width="8"/>
+              <path d="M30.5615 3.89999L28.5033 5.14296C23.1235 8.39188 22.9113 16.1184 28.1048 19.6576V19.6576C32.9721 22.9746 33.1581 30.0857 28.4709 33.6526L25.2549 36.1" stroke="#664FEC" stroke-width="8"/>
+              <path d="M47.5615 3.89999L45.5033 5.14296C40.1235 8.39188 39.9113 16.1184 45.1048 19.6576V19.6576C49.9721 22.9746 50.1581 30.0857 45.4709 33.6526L42.2549 36.1" stroke="#664FEC" stroke-width="8"/>
+            </svg>
+        </a>
+        <p class="navbar_brand_title">Sybella Sandoval Soto</p>
+    </div>
+    <div class="navbar-toggle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <mask id="mask0_73_396" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="40" height="40">
+                <rect width="40" height="40" fill="#D9D9D9"/>
+            </mask>
+            <g mask="url(#mask0_73_396)">
+                <path d="M6.16659 31.1667C5.43464 31.1667 4.82103 30.9097 4.32575 30.3958C3.83075 29.8819 3.58325 29.2604 3.58325 28.5312C3.58325 27.8024 3.83075 27.1913 4.32575 26.6979C4.82103 26.2049 5.43464 25.9583 6.16659 25.9583H25.9999C26.7319 25.9583 27.3453 26.2153 27.8403 26.7292C28.3356 27.2431 28.5833 27.8646 28.5833 28.5938C28.5833 29.3226 28.3356 29.9338 27.8403 30.4271C27.3453 30.9201 26.7319 31.1667 25.9999 31.1667H6.16659ZM10.0833 22.625C9.35131 22.625 8.7377 22.3681 8.24242 21.8542C7.74742 21.3403 7.49992 20.7188 7.49992 19.9896C7.49992 19.2607 7.74742 18.6496 8.24242 18.1562C8.7377 17.6632 9.35131 17.4167 10.0833 17.4167H29.9166C30.6485 17.4167 31.262 17.6736 31.757 18.1875C32.2523 18.7014 32.4999 19.3229 32.4999 20.0521C32.4999 20.781 32.2523 21.3921 31.757 21.8854C31.262 22.3785 30.6485 22.625 29.9166 22.625H10.0833ZM13.9999 14.0833C13.268 14.0833 12.6545 13.8264 12.1595 13.3125C11.6642 12.7986 11.4166 12.1771 11.4166 11.4479C11.4166 10.719 11.6642 10.1079 12.1595 9.61458C12.6545 9.12153 13.268 8.875 13.9999 8.875H33.8333C34.5652 8.875 35.1787 9.13194 35.6737 9.64583C36.1689 10.1597 36.4166 10.7813 36.4166 11.5104C36.4166 12.2393 36.1689 12.8504 35.6737 13.3438C35.1787 13.8368 34.5652 14.0833 33.8333 14.0833H13.9999Z" fill="#4A4A4A"/>
+            </g>
+        </svg>
+    </div>
+    <nav class="navbar_menu">
+        <ul>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li class="btn_principal flex principal">
+                <a href="#contacto" style="color:#fff;">Hablemos</a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="#FFF">
+                    <mask id="mask0_73_343" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="24">
+                        <rect x="0.5" width="24" height="24" fill="#D9D9D9"/>
+                    </mask>
+                    <g mask="url(#mask0_73_343)">
+                        <path d="M16.4223 9.87226L7.75556 18.5393C7.54023 18.7544 7.27498 18.861 6.95981 18.859C6.64464 18.857 6.37948 18.7484 6.16431 18.5333C5.94898 18.3179 5.84131 18.0517 5.84131 17.7345C5.84131 17.4173 5.94898 17.1511 6.16431 16.9358L14.8251 8.27501H7.55981C7.24064 8.27501 6.97131 8.16526 6.75181 7.94576C6.53214 7.7261 6.42231 7.45668 6.42231 7.13751C6.42231 6.81834 6.53214 6.54893 6.75181 6.32926C6.97131 6.10976 7.24064 6.00001 7.55981 6.00001H17.5598C17.879 6.00001 18.1484 6.10976 18.3681 6.32926C18.5876 6.54893 18.6973 6.81834 18.6973 7.13751V17.1375C18.6973 17.4567 18.5876 17.7261 18.3681 17.9458C18.1484 18.1653 17.879 18.275 17.5598 18.275C17.2406 18.275 16.9713 18.1653 16.7518 17.9458C16.5321 17.7261 16.4223 17.4567 16.4223 17.1375V9.87226Z" fill="white"/>
+                    </g>
+                </svg>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+    <main>
+        <section class="banner flex" aria-label="Sección principal">
+            <div class="banner_content flex">
+                <div class="banner_content_titles flex">
+                    <h1>¿Buscas un <span class="banner_content_titles--sub">diseñador web</span> en Chile para tu proyecto?</h1>
+                    <p>Soy Sybella Sandoval,  me apasiona crear sitios web únicos, combinando diseño UX/UI, desarrollo web y material gráfico atractivo para que tu proyecto realmente destaque.</p>
+                </div>
+                <div class="banner_ctas flex">
+                    <div class="btn_principal flex principal t-white">
+                      <a href="#contacto">Hablemos</a>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="#FFF">
+                            <mask id="mask0_73_343" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="24">
+                              <rect x="0.5" width="24" height="24" fill="#D9D9D9"/>
+                            </mask>
+                            <g mask="url(#mask0_73_343)">
+                              <path d="M16.4223 9.87226L7.75556 18.5393C7.54023 18.7544 7.27498 18.861 6.95981 18.859C6.64464 18.857 6.37948 18.7484 6.16431 18.5333C5.94898 18.3179 5.84131 18.0517 5.84131 17.7345C5.84131 17.4173 5.94898 17.1511 6.16431 16.9358L14.8251 8.27501H7.55981C7.24064 8.27501 6.97131 8.16526 6.75181 7.94576C6.53214 7.7261 6.42231 7.45668 6.42231 7.13751C6.42231 6.81834 6.53214 6.54893 6.75181 6.32926C6.97131 6.10976 7.24064 6.00001 7.55981 6.00001H17.5598C17.879 6.00001 18.1484 6.10976 18.3681 6.32926C18.5876 6.54893 18.6973 6.81834 18.6973 7.13751V17.1375C18.6973 17.4567 18.5876 17.7261 18.3681 17.9458C18.1484 18.1653 17.879 18.275 17.5598 18.275C17.2406 18.275 16.9713 18.1653 16.7518 17.9458C16.5321 17.7261 16.4223 17.4567 16.4223 17.1375V9.87226Z" fill="white"/>
+                            </g>
+                          </svg>
+                    </div>
+                    <a href="#proyectos" class="btn_terciary t-20">
+                      Ve mis proyectos
+                  </a>
+                </div>
+            </div>
+
+            <img class="banner_image" src="assets\img\banner.webp" width="100%" alt="banner sitios y aplicaciones" loading="eager">
+
+        </section>
+
+        <section class="servicios flex" aria-label="Sección de servicios ofrecidos">
+            <div class="servicios_content flex">
+                <div class="servicios_titles flex">
+                    <p>SERVICIOS</p>
+                    <h2>Puedo transformar tu sitio web en una experiencia atractiva</h2>
+                </div>
+                <p>Ofrezco soluciones integrales en diseño, desarrollo web y más, para que tu sitio web destaque entre la competencia.</p>
+                <div class="btn_principal flex black">
+                  <a href="#contacto" style="color:#fff;">Hablemos</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="#FFF">
+                        <mask id="mask0_73_343" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="24">
+                          <rect x="0.5" width="24" height="24" fill="#D9D9D9"/>
+                        </mask>
+                        <g mask="url(#mask0_73_343)">
+                          <path d="M16.4223 9.87226L7.75556 18.5393C7.54023 18.7544 7.27498 18.861 6.95981 18.859C6.64464 18.857 6.37948 18.7484 6.16431 18.5333C5.94898 18.3179 5.84131 18.0517 5.84131 17.7345C5.84131 17.4173 5.94898 17.1511 6.16431 16.9358L14.8251 8.27501H7.55981C7.24064 8.27501 6.97131 8.16526 6.75181 7.94576C6.53214 7.7261 6.42231 7.45668 6.42231 7.13751C6.42231 6.81834 6.53214 6.54893 6.75181 6.32926C6.97131 6.10976 7.24064 6.00001 7.55981 6.00001H17.5598C17.879 6.00001 18.1484 6.10976 18.3681 6.32926C18.5876 6.54893 18.6973 6.81834 18.6973 7.13751V17.1375C18.6973 17.4567 18.5876 17.7261 18.3681 17.9458C18.1484 18.1653 17.879 18.275 17.5598 18.275C17.2406 18.275 16.9713 18.1653 16.7518 17.9458C16.5321 17.7261 16.4223 17.4567 16.4223 17.1375V9.87226Z" fill="white"/>
+                        </g>
+                      </svg>
+                </div>
+            </div>
+            <div class="servicios_cards flex">
+                <article class="servicios_cards_card flex">
+                    <div class="servicios_cards_card_content flex">
+                        <div class="servicios_cards_card_title flex"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <mask id="mask0_73_363" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                  <rect width="24" height="24" fill="#D9D9D9"/>
+                                </mask>
+                                <g mask="url(#mask0_73_363)">
+                                  <path d="M3.5 20C3.08333 20 2.72917 19.8542 2.4375 19.5625C2.14583 19.2708 2 18.9167 2 18.5C2 18.0833 2.14583 17.7292 2.4375 17.4375C2.72917 17.1458 3.08333 17 3.5 17H4V6C4 5.45 4.19583 4.97917 4.5875 4.5875C4.97917 4.19583 5.45 4 6 4H20C20.2833 4 20.5208 4.09583 20.7125 4.2875C20.9042 4.47917 21 4.71667 21 5C21 5.28333 20.9042 5.52083 20.7125 5.7125C20.5208 5.90417 20.2833 6 20 6H6V17H10.5C10.9167 17 11.2708 17.1458 11.5625 17.4375C11.8542 17.7292 12 18.0833 12 18.5C12 18.9167 11.8542 19.2708 11.5625 19.5625C11.2708 19.8542 10.9167 20 10.5 20H3.5ZM15 20C14.7167 20 14.4792 19.9042 14.2875 19.7125C14.0958 19.5208 14 19.2833 14 19V9C14 8.71667 14.0958 8.47917 14.2875 8.2875C14.4792 8.09583 14.7167 8 15 8H21C21.2833 8 21.5208 8.09583 21.7125 8.2875C21.9042 8.47917 22 8.71667 22 9V19C22 19.2833 21.9042 19.5208 21.7125 19.7125C21.5208 19.9042 21.2833 20 21 20H15ZM16 17H20V10H16V17Z" fill="#664FEC"/>
+                                </g>
+                              </svg>
+                            <h3>Diseño UX/UI</h3>
+                        </div>
+                        <p class="t-15 gray">Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.</p>
+                        <div class="btn_terciary t-15">
+                            <p>Saber más...</p>
+                        </div>
+                    </div>
+                </article>
+                <div class="servicios_cards_card flex">
+                    <article class="servicios_cards_card_content flex">
+                        <div class="servicios_cards_card_title flex"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <mask id="mask0_73_373" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                  <rect width="24" height="24" fill="#D9D9D9"/>
+                                </mask>
+                                <g mask="url(#mask0_73_373)">
+                                  <path d="M5.07927 12.0107L8.72827 15.6597C8.98694 15.9184 9.11394 16.2295 9.10927 16.593C9.10461 16.9563 8.97294 17.2673 8.71427 17.526C8.45544 17.7848 8.14669 17.9118 7.78802 17.907C7.42936 17.9023 7.12069 17.7753 6.86202 17.526L2.26202 12.9402C2.13369 12.8119 2.03694 12.6659 1.97177 12.5022C1.90661 12.3384 1.87402 12.171 1.87402 12C1.87402 11.829 1.90661 11.6616 1.97177 11.4977C2.03694 11.3341 2.13369 11.1881 2.26202 11.0597L6.86202 6.45973C7.12786 6.19373 7.44069 6.06073 7.80052 6.06073C8.16036 6.06073 8.47327 6.19373 8.73927 6.45973C9.00511 6.72573 9.13802 7.04098 9.13802 7.40548C9.13802 7.76998 9.00511 8.08515 8.73927 8.35098L5.07927 12.0107ZM18.9208 11.9892L15.2718 8.34023C15.0131 8.08156 14.8861 7.77048 14.8908 7.40698C14.8954 7.04365 15.0271 6.73265 15.2858 6.47398C15.5446 6.21515 15.8534 6.08815 16.212 6.09298C16.5707 6.09765 16.8794 6.22465 17.138 6.47398L21.738 11.0597C21.8664 11.1881 21.9631 11.3341 22.0283 11.4977C22.0934 11.6616 22.126 11.829 22.126 12C22.126 12.171 22.0934 12.3384 22.0283 12.5022C21.9631 12.6659 21.8664 12.8119 21.738 12.9402L17.138 17.5402C16.8722 17.8062 16.5612 17.9374 16.205 17.9337C15.8489 17.9301 15.5378 17.7952 15.2718 17.5292C15.0058 17.2634 14.8728 16.9482 14.8728 16.5837C14.8728 16.2192 15.0058 15.904 15.2718 15.638L18.9208 11.9892Z" fill="#664FEC"/>
+                                </g>
+                              </svg>
+                            <h3>Desarrollo web</h3>
+                        </div>
+                        <p class="t-15 gray">Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.</p>
+                        <div class="btn_terciary t-15">
+                            <p>Saber más...</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="servicios_cards_card flex">
+                    <article class="servicios_cards_card_content flex">
+                        <div class="servicios_cards_card_title flex"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <mask id="mask0_73_383" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                  <rect width="24" height="24" fill="#D9D9D9"/>
+                                </mask>
+                                <g mask="url(#mask0_73_383)">
+                                  <path d="M8.68649 10.7946L10.7825 8.6733L9.50824 7.38005L9.09624 7.7858C8.90491 7.97714 8.67074 8.07497 8.39374 8.0793C8.11674 8.08364 7.87624 7.98389 7.67224 7.78005C7.46824 7.57605 7.36624 7.33455 7.36624 7.05555C7.36624 6.77655 7.46824 6.53505 7.67224 6.33105L8.05924 5.94405L6.99399 4.8848L4.87874 7.00605L8.68649 10.7946ZM17 19.1273L19.1152 17.0121L18.044 15.9408L17.632 16.3278C17.428 16.5318 17.1907 16.6328 16.92 16.6308C16.6495 16.6288 16.4122 16.5258 16.2082 16.3218C16.0042 16.1178 15.9022 15.8795 15.9022 15.6068C15.9022 15.3341 16.0042 15.0958 16.2082 14.8918L16.595 14.4858L15.2957 13.2056L13.1935 15.3076L17 19.1273ZM3.93424 21.2033C3.61508 21.2033 3.34566 21.0936 3.12599 20.8741C2.90649 20.6544 2.79674 20.385 2.79674 20.0658V17.1571C2.79674 17.0039 2.82474 16.8578 2.88074 16.7188C2.93674 16.5798 3.02066 16.4544 3.13249 16.3426L7.13574 12.3393L2.99624 8.19955C2.66908 7.87239 2.50549 7.47255 2.50549 7.00005C2.50549 6.52755 2.66908 6.12772 2.99624 5.80055L5.79449 3.0023C6.12166 2.67514 6.52149 2.51472 6.99399 2.52105C7.46649 2.52739 7.86633 2.69414 8.19349 3.0213L12.3582 7.1668L16.0852 3.4208C16.2932 3.2128 16.5262 3.0568 16.7842 2.9528C17.0422 2.8488 17.3086 2.7968 17.5832 2.7968C17.8577 2.7968 18.124 2.8478 18.382 2.9498C18.64 3.0518 18.873 3.2068 19.081 3.4148L20.5792 4.93205C20.7872 5.14005 20.9432 5.37405 21.0472 5.63405C21.1512 5.89405 21.2032 6.1613 21.2032 6.4358C21.2032 6.71047 21.1512 6.97364 21.0472 7.2253C20.9432 7.47697 20.7872 7.7068 20.5792 7.9148L16.8522 11.6551L21.0037 15.8066C21.3309 16.1337 21.4945 16.5336 21.4945 17.0061C21.4945 17.4786 21.3309 17.8784 21.0037 18.2056L18.2055 21.0038C17.8783 21.331 17.4785 21.4946 17.006 21.4946C16.5335 21.4946 16.1337 21.331 15.8065 21.0038L11.649 16.8523L7.64574 20.8616C7.53374 20.9734 7.40824 21.0583 7.26924 21.1163C7.13024 21.1743 6.98416 21.2033 6.83099 21.2033H3.93424ZM4.98199 19.0181H6.38799L15.931 9.49405L14.506 8.06305L4.98199 17.6001V19.0181ZM15.231 8.78805L14.506 8.06305L15.931 9.49405L15.231 8.78805Z" fill="#664FEC"/>
+                                </g>
+                              </svg>
+                            <h3>Diseño gráfico</h3>
+                        </div>
+                        <p class="t-15 gray">Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.</p>
+                        <div class="btn_terciary t-15">
+                            <p>Saber más...</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="about flex" aria-label="Sección de sobre mí, con información personal">
+          <div class="about_content">
+            <article class="about_principal flex">
+              <h2>Sobre mí</h2>
+              <div class="about_principal_info flex">
+                <div class="about_principal_info_datos flex">
+                  <img src="assets\img\aboutme.png" alt="Foto de Sybella Sandoval" width="75px" loading="lazy">
+                  <div>
+                    <h3>Sybella Sandoval Soto</h3>
+                    <p class="gray t-15 fw-500">Diseñadora gráfica con mención en interfaces e interacciones, Duoc UC</p>
+                  </div>
+                </div>
+
+                <p class="gray lh-21 t-15">
+                  Desde 2018, comencé mi camino en el diseño de manera autodidacta con pequeños proyectos editoriales. En 2020, formalicé mi pasión estudiando Diseño Gráfico en Duoc UC, especializándome en interfaces e interacciones. Con el tiempo, descubrí mi interés por el desarrollo web, y ahora estoy combinando mis habilidades en diseño con la programación. Mi objetivo es convertirme en <b><i>Webmaster</i></b> y así poder ofrecer soluciones digitales completas.
+                </p>
+
+                <div class="about_principal_info_rrss flex">
+                  <h4 class="fw-500 gray">MIS REDES SOCIALES</h4>
+                  <div class="about_principal_info_rrss_icons flex">
+
+                      <a href="aquifaltaalgo" target="_blank" class="about_principal_info_rrss_icons_icon black flex">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="21" height="14" viewBox="0 0 21 14" fill="none">
+                        <path d="M6.1094 0.5C6.71522 0.5 7.27553 0.546429 7.78749 0.683857C8.3004 0.775786 8.72039 0.959643 9.09298 1.189C9.46653 1.41867 9.74621 1.74026 9.93203 2.15379C10.1188 2.567 10.2127 3.07307 10.2127 3.62371C10.2127 4.26721 10.0723 4.81785 9.74621 5.23107C9.46653 5.64521 9.00007 6.012 8.44071 6.28778C9.2333 6.51807 9.83912 6.93128 10.2127 7.48193C10.5862 8.03257 10.8185 8.7225 10.8185 9.50342C10.8185 10.1469 10.6782 10.6976 10.4449 11.1572C10.2127 11.6169 9.83912 12.0301 9.41912 12.3059C8.9627 12.6011 8.45844 12.8184 7.9278 12.9484C7.36844 13.0868 6.80908 13.1787 6.24972 13.1787H0.000976562V0.5H6.1094ZM5.73586 5.64428C6.24877 5.64428 6.66876 5.50685 6.9949 5.2775C7.32104 5.04814 7.46135 4.634 7.46135 4.12886C7.46135 3.85307 7.41395 3.57728 7.32104 3.39436C7.22813 3.21143 7.08781 3.07214 6.90199 2.93471C6.71199 2.8302 6.50765 2.75296 6.29522 2.70536C6.062 2.65893 5.82972 2.65893 5.54909 2.65893H2.84519V5.64521L5.73586 5.64428ZM5.87618 11.0653C6.15586 11.0653 6.43554 11.0189 6.66877 10.9734C6.90199 10.9269 7.13522 10.8359 7.32104 10.6976C7.51027 10.5623 7.66905 10.3904 7.78749 10.1924C7.8804 9.96307 7.97426 9.68728 7.97426 9.366C7.97426 8.7225 7.78749 8.26285 7.4149 7.94157C7.04136 7.66578 6.52845 7.52835 5.92263 7.52835H2.84519V11.0662L5.87618 11.0653ZM14.8753 11.0189C15.2482 11.3866 15.8075 11.5704 16.5534 11.5704C17.0663 11.5704 17.5327 11.433 17.9053 11.2036C18.2789 10.9275 18.5121 10.6518 18.605 10.3763H20.8898C20.5163 11.4785 19.9569 12.2594 19.2118 12.7646C18.4647 13.2242 17.5792 13.5 16.5069 13.5C15.8209 13.501 15.1409 13.3763 14.5017 13.1323C13.9264 12.9221 13.4135 12.5749 13.0095 12.122C12.5755 11.6998 12.2553 11.1788 12.0775 10.6056C11.8443 10.0086 11.7504 9.366 11.7504 8.63057C11.7504 7.94157 11.8443 7.299 12.0775 6.701C12.3012 6.12491 12.6334 5.5951 13.0569 5.13914C13.4759 4.72593 13.9888 4.35914 14.5482 4.12886C15.1709 3.884 15.8359 3.75914 16.5069 3.76114C17.2995 3.76114 17.9992 3.8995 18.605 4.22078C19.2118 4.54207 19.6773 4.90978 20.0498 5.46135C20.4234 5.9665 20.704 6.56357 20.8898 7.20707C20.9828 7.84964 21.0292 8.49314 20.9828 9.22764H14.2221C14.2221 9.96307 14.5017 10.6521 14.8753 11.0198M17.8124 6.19678C17.4863 5.8755 16.9734 5.69164 16.3666 5.69164C16.0108 5.68642 15.659 5.76508 15.3408 5.921C15.0611 6.05935 14.8753 6.24321 14.6885 6.42707C14.5158 6.60393 14.4021 6.82802 14.3624 7.06964C14.315 7.29993 14.2685 7.48285 14.2685 7.66671H18.4647C18.3718 6.97771 18.1385 6.519 17.8124 6.19678ZM13.7091 1.37286H18.9311V2.61343H13.7101L13.7091 1.37286Z" fill="white"/>
+                      </svg>
+                    </a>
+                    
+                    <a href="aquifaltaalgo" target="_blank" class="about_principal_info_rrss_icons_icon black flex">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M5.85383 1.92525C6.47993 2.13653 7.07537 2.42963 7.62467 2.79692C8.40093 2.59823 9.19921 2.49855 10.0005 2.50025C10.828 2.50025 11.6263 2.60359 12.3747 2.79609C12.9238 2.42915 13.5189 2.13634 14.1447 1.92525C14.7255 1.72775 15.553 1.40776 16.0447 1.95192C16.378 2.32192 16.4613 2.94192 16.5205 3.41526C16.5872 3.94359 16.603 4.63192 16.428 5.31525C17.0972 6.17942 17.5005 7.21026 17.5005 8.33359C17.5005 10.0353 16.5788 11.5128 15.2147 12.5361C14.5578 13.0219 13.8298 13.403 13.0563 13.6661C13.2347 14.0744 13.3338 14.5261 13.3338 15.0003V17.5003C13.3338 17.7213 13.246 17.9332 13.0898 18.0895C12.9335 18.2458 12.7215 18.3336 12.5005 18.3336H7.5005C7.27949 18.3336 7.06753 18.2458 6.91125 18.0895C6.75497 17.9332 6.66717 17.7213 6.66717 17.5003V16.6744C5.87133 16.7719 5.20383 16.6853 4.63633 16.4444C4.043 16.1928 3.62967 15.8028 3.31883 15.4294C3.02383 15.0761 2.70217 14.2794 2.23717 14.1244C2.13331 14.0898 2.03729 14.0351 1.95457 13.9635C1.87186 13.8918 1.80408 13.8045 1.75509 13.7066C1.65617 13.5089 1.63983 13.28 1.70967 13.0703C1.77951 12.8605 1.92981 12.6871 2.1275 12.5882C2.3252 12.4893 2.55409 12.4729 2.76383 12.5428C3.31883 12.7278 3.6805 13.1278 3.928 13.4494C4.328 13.9661 4.653 14.6411 5.28633 14.9103C5.54717 15.0211 5.92967 15.0936 6.528 15.0119L6.66717 14.9836C6.66909 14.5301 6.76351 14.0818 6.94467 13.6661C6.17123 13.403 5.44317 13.0219 4.78633 12.5361C3.42217 11.5128 2.5005 10.0361 2.5005 8.33359C2.5005 7.21192 2.903 6.18192 3.5705 5.31859C3.3955 4.63526 3.4105 3.94526 3.47717 3.41609L3.48133 3.38442C3.54217 2.89942 3.613 2.32859 3.953 1.95192C4.44467 1.40776 5.273 1.72859 5.853 1.92609L5.85383 1.92525Z" fill="white"/>
+                      </svg>
+                    </a>
+
+                    <a href="aquifaltaalgo" target="_blank" class="about_principal_info_rrss_icons_icon black flex">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M3.35879 1.77857C3.35857 2.25004 3.18147 2.7021 2.86646 3.03532C2.55145 3.36853 2.12432 3.55559 1.67905 3.55536C1.23377 3.55512 0.806823 3.36761 0.492124 3.03406C0.177425 2.70051 0.000754136 2.24826 0.000976773 1.77679C0.00119941 1.30532 0.178297 0.853255 0.493311 0.520042C0.808325 0.186829 1.23545 -0.000235512 1.68072 2.22531e-07C2.126 0.000235957 2.55295 0.187753 2.86765 0.521299C3.18235 0.854845 3.35902 1.3071 3.35879 1.77857ZM3.40916 4.87173H0.051344V16H3.40916V4.87173ZM8.71451 4.87173H5.37349V16H8.68093V10.1603C8.68093 6.90717 12.6851 6.60497 12.6851 10.1603V16H16.001V8.9515C16.001 3.46736 10.0744 3.6718 8.68093 6.36498L8.71451 4.87173Z" fill="white"/>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+            </div>
+            <div class="btn_principal flex principal t-white">
+              <a href="aquifaltaalgo">Descargar CV</a>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <mask id="mask0_96_675" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="25">
+                  <rect y="0.000488281" width="24" height="24" fill="#D9D9D9"/>
+                </mask>
+                <g mask="url(#mask0_96_675)">
+                  <path d="M11.9999 15.45C11.8505 15.45 11.7076 15.4242 11.5711 15.3725C11.4345 15.3208 11.3101 15.2391 11.1981 15.1272L7.50863 11.4375C7.28463 11.2135 7.1758 10.9482 7.18213 10.6417C7.18846 10.3352 7.2973 10.0701 7.50863 9.84624C7.73646 9.61824 8.0058 9.50107 8.31663 9.49474C8.62763 9.48841 8.89705 9.59916 9.12488 9.82699L10.8624 11.5645V4.93474C10.8624 4.61557 10.9721 4.34616 11.1916 4.12649C11.4113 3.90699 11.6807 3.79724 11.9999 3.79724C12.319 3.79724 12.5885 3.90699 12.8081 4.12649C13.0276 4.34616 13.1374 4.61557 13.1374 4.93474V11.5645L14.8749 9.82699C15.0987 9.59916 15.3661 9.48741 15.6771 9.49174C15.988 9.49608 16.2573 9.61224 16.4851 9.84024C16.7005 10.0681 16.8113 10.3342 16.8176 10.6387C16.824 10.9432 16.7131 11.2095 16.4851 11.4375L12.8016 15.1272C12.6896 15.2391 12.5653 15.3208 12.4286 15.3725C12.2921 15.4242 12.1492 15.45 11.9999 15.45ZM6.07163 20.2037C5.44196 20.2037 4.90538 19.982 4.46188 19.5385C4.01838 19.095 3.79663 18.5584 3.79663 17.9287V16.0662C3.79663 15.7471 3.90638 15.4777 4.12588 15.258C4.34555 15.0385 4.61496 14.9287 4.93413 14.9287C5.2533 14.9287 5.52271 15.0385 5.74238 15.258C5.96188 15.4777 6.07163 15.7471 6.07163 16.0662V17.9287H17.9281V16.0662C17.9281 15.7471 18.0379 15.4777 18.2574 15.258C18.477 15.0385 18.7465 14.9287 19.0656 14.9287C19.3848 14.9287 19.6542 15.0385 19.8739 15.258C20.0934 15.4777 20.2031 15.7471 20.2031 16.0662V17.9287C20.2031 18.5584 19.9814 19.095 19.5379 19.5385C19.0944 19.982 18.5578 20.2037 17.9281 20.2037H6.07163Z" fill="white"/>
+                </g>
+              </svg>
+          </div>
+          </article>
+          <aside class="about_secondary flex">
+            <div class="about_secondary_esencia flex">
+              <h4 class="fw-500 gray">MI ESENCIA</h4>
+              <blockquote>
+                Una mente curiosa e inquieta en el mundo del diseño, con una pasión insaciable por el conocimiento y siempre lista para asumir nuevos desafíos.
+              </blockquote>
+            </div>
+            <div class="about_secondary_habilidades flex">
+              <h4 class="fw-500 gray">MIS HABILIDADES</h4>
+              <ul>
+                <li class="about_secondary_badge flex t-15">
+                  Wireframing
+                </li>
+                <li class="about_secondary_badge flex t-15">
+                  Prototyping
+                </li>
+                <li class="about_secondary_badge flex t-15">
+                  Design System
+                </li>
+                <li class="about_secondary_badge flex t-15">
+                  Research
+                </li>
+                <li class="about_secondary_badge flex t-15">
+                  User tests
+                </li>
+                <li class="about_secondary_badge flex t-15">
+                  Documentación
+                </li>
+                <li class="about_secondary_badge flex t-15">
+                  HTML5
+                </li>
+                <li class="about_secondary_badge flex t-15">
+                  CSS3
+                </li>
+                <li class="about_secondary_badge flex t-15">
+                  Javascript
+                </li>
+                <li class="about_secondary_badge flex t-15">
+                  React
+                </li>
+              </ul>
+            </div>
+
+            <div class="about_secondary_softwares flex">
+              <h4 class="fw-500 gray">SOFTWARES</h4>
+              <ul>
+                <li class="about_secondary_badge flex t-15">
+                  Figma
+                </li>
+                <li class="about_secondary_badge flex t-15">
+                  Adobe Suite
+                </li>
+                <li class="about_secondary_badge flex t-15">
+                  Wordpress
+                </li>
+                <li class="about_secondary_badge flex t-15">
+                  VS Code
+                </li>
+              </ul>
+            </div>
+          </aside>
+        </section>
+
+        <section class="proyectos flex" aria-label="Sección de proyectos realizados">
+          <div class="proyectos_titles flex">
+            <p class="t-20">PROYECTOS</p>
+            <h2>Explora mis trabajos recientes</h2>
+          </div>
+
+          <section class="proyectos_cards">
+            <article class="proyectos_cards_card flex">
+              <img src="assets\img\portafolio-mockup.webp" alt="hola" height="293px" loading="lazy">
+              <div class="proyectos_cards_card_content flex">
+                <div class="proyectos_cards_card_titles flex">
+                  <h3>Portafolio Sybella Sandoval</h3>
+                  <p>Diseño UX/UI, Desarrollo web</p>
+                </div>
+                <button>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <mask id="mask0_123_237" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                      <rect width="24" height="24" fill="#D9D9D9"/>
+                    </mask>
+                    <g mask="url(#mask0_123_237)">
+                      <path d="M15.9223 9.87225L7.25556 18.5393C7.04023 18.7544 6.77498 18.861 6.45981 18.859C6.14464 18.857 5.87948 18.7484 5.66431 18.5332C5.44898 18.3179 5.34131 18.0517 5.34131 17.7345C5.34131 17.4173 5.44898 17.1511 5.66431 16.9358L14.3251 8.275H7.05981C6.74064 8.275 6.47131 8.16525 6.25181 7.94575C6.03214 7.72608 5.92231 7.45667 5.92231 7.1375C5.92231 6.81833 6.03214 6.54892 6.25181 6.32925C6.47131 6.10975 6.74064 6 7.05981 6H17.0598C17.379 6 17.6484 6.10975 17.8681 6.32925C18.0876 6.54892 18.1973 6.81833 18.1973 7.1375V17.1375C18.1973 17.4567 18.0876 17.7261 17.8681 17.9458C17.6484 18.1652 17.379 18.275 17.0598 18.275C16.7406 18.275 16.4713 18.1652 16.2518 17.9458C16.0321 17.7261 15.9223 17.4567 15.9223 17.1375V9.87225Z" fill="white"/>
+                    </g>
+                  </svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="proyectos_cards_card flex">
+              <img src="assets\img\macrodent-mockup.webp" alt="hola" height="293px" loading="lazy">
+              <div class="proyectos_cards_card_content flex">
+                <div class="proyectos_cards_card_titles flex">
+                  <h3>Landing Clínica Macrodent </h3>
+                  <p>Diseño UI, Desarrollo web, SEO</p>
+                </div>
+                <button>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <mask id="mask0_123_237" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                      <rect width="24" height="24" fill="#D9D9D9"/>
+                    </mask>
+                    <g mask="url(#mask0_123_237)">
+                      <path d="M15.9223 9.87225L7.25556 18.5393C7.04023 18.7544 6.77498 18.861 6.45981 18.859C6.14464 18.857 5.87948 18.7484 5.66431 18.5332C5.44898 18.3179 5.34131 18.0517 5.34131 17.7345C5.34131 17.4173 5.44898 17.1511 5.66431 16.9358L14.3251 8.275H7.05981C6.74064 8.275 6.47131 8.16525 6.25181 7.94575C6.03214 7.72608 5.92231 7.45667 5.92231 7.1375C5.92231 6.81833 6.03214 6.54892 6.25181 6.32925C6.47131 6.10975 6.74064 6 7.05981 6H17.0598C17.379 6 17.6484 6.10975 17.8681 6.32925C18.0876 6.54892 18.1973 6.81833 18.1973 7.1375V17.1375C18.1973 17.4567 18.0876 17.7261 17.8681 17.9458C17.6484 18.1652 17.379 18.275 17.0598 18.275C16.7406 18.275 16.4713 18.1652 16.2518 17.9458C16.0321 17.7261 15.9223 17.4567 15.9223 17.1375V9.87225Z" fill="white"/>
+                    </g>
+                  </svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="proyectos_cards_card flex">
+              <img src="assets\img\puertadelsol-mockup.webp" alt="hola" height="293px" loading="lazy">
+              <div class="proyectos_cards_card_content flex">
+                <div class="proyectos_cards_card_titles flex">
+                  <h3>Rediseño sitio Clínica Puerta del Sol</h3>
+                  <p>Diseño UI, Diseño Gráfico</p>
+                </div>
+                <button>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <mask id="mask0_123_237" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                      <rect width="24" height="24" fill="#D9D9D9"/>
+                    </mask>
+                    <g mask="url(#mask0_123_237)">
+                      <path d="M15.9223 9.87225L7.25556 18.5393C7.04023 18.7544 6.77498 18.861 6.45981 18.859C6.14464 18.857 5.87948 18.7484 5.66431 18.5332C5.44898 18.3179 5.34131 18.0517 5.34131 17.7345C5.34131 17.4173 5.44898 17.1511 5.66431 16.9358L14.3251 8.275H7.05981C6.74064 8.275 6.47131 8.16525 6.25181 7.94575C6.03214 7.72608 5.92231 7.45667 5.92231 7.1375C5.92231 6.81833 6.03214 6.54892 6.25181 6.32925C6.47131 6.10975 6.74064 6 7.05981 6H17.0598C17.379 6 17.6484 6.10975 17.8681 6.32925C18.0876 6.54892 18.1973 6.81833 18.1973 7.1375V17.1375C18.1973 17.4567 18.0876 17.7261 17.8681 17.9458C17.6484 18.1652 17.379 18.275 17.0598 18.275C16.7406 18.275 16.4713 18.1652 16.2518 17.9458C16.0321 17.7261 15.9223 17.4567 15.9223 17.1375V9.87225Z" fill="white"/>
+                    </g>
+                  </svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="proyectos_cards_card flex">
+              <img src="assets\img\fuentecarrera-mockup.webp" alt="hola" height="293px" loading="lazy">
+              <div class="proyectos_cards_card_content flex">
+                <div class="proyectos_cards_card_titles flex">
+                  <h3>Rediseño E-commerce La Fuente Carrera</h3>
+                  <p>Diseño UI</p>
+                </div>
+                <button>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <mask id="mask0_123_237" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                      <rect width="24" height="24" fill="#D9D9D9"/>
+                    </mask>
+                    <g mask="url(#mask0_123_237)">
+                      <path d="M15.9223 9.87225L7.25556 18.5393C7.04023 18.7544 6.77498 18.861 6.45981 18.859C6.14464 18.857 5.87948 18.7484 5.66431 18.5332C5.44898 18.3179 5.34131 18.0517 5.34131 17.7345C5.34131 17.4173 5.44898 17.1511 5.66431 16.9358L14.3251 8.275H7.05981C6.74064 8.275 6.47131 8.16525 6.25181 7.94575C6.03214 7.72608 5.92231 7.45667 5.92231 7.1375C5.92231 6.81833 6.03214 6.54892 6.25181 6.32925C6.47131 6.10975 6.74064 6 7.05981 6H17.0598C17.379 6 17.6484 6.10975 17.8681 6.32925C18.0876 6.54892 18.1973 6.81833 18.1973 7.1375V17.1375C18.1973 17.4567 18.0876 17.7261 17.8681 17.9458C17.6484 18.1652 17.379 18.275 17.0598 18.275C16.7406 18.275 16.4713 18.1652 16.2518 17.9458C16.0321 17.7261 15.9223 17.4567 15.9223 17.1375V9.87225Z" fill="white"/>
+                    </g>
+                  </svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="proyectos_cards_card flex">
+              <img src="assets\img\soteel-mockup.webp" alt="hola" height="293px" loading="lazy">
+              <div class="proyectos_cards_card_content flex">
+                <div class="proyectos_cards_card_titles flex">
+                  <h3>Rediseño E-commerce Soteel</h3>
+                  <p>Diseño UX/UI</p>
+                </div>
+                <button>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <mask id="mask0_123_237" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                      <rect width="24" height="24" fill="#D9D9D9"/>
+                    </mask>
+                    <g mask="url(#mask0_123_237)">
+                      <path d="M15.9223 9.87225L7.25556 18.5393C7.04023 18.7544 6.77498 18.861 6.45981 18.859C6.14464 18.857 5.87948 18.7484 5.66431 18.5332C5.44898 18.3179 5.34131 18.0517 5.34131 17.7345C5.34131 17.4173 5.44898 17.1511 5.66431 16.9358L14.3251 8.275H7.05981C6.74064 8.275 6.47131 8.16525 6.25181 7.94575C6.03214 7.72608 5.92231 7.45667 5.92231 7.1375C5.92231 6.81833 6.03214 6.54892 6.25181 6.32925C6.47131 6.10975 6.74064 6 7.05981 6H17.0598C17.379 6 17.6484 6.10975 17.8681 6.32925C18.0876 6.54892 18.1973 6.81833 18.1973 7.1375V17.1375C18.1973 17.4567 18.0876 17.7261 17.8681 17.9458C17.6484 18.1652 17.379 18.275 17.0598 18.275C16.7406 18.275 16.4713 18.1652 16.2518 17.9458C16.0321 17.7261 15.9223 17.4567 15.9223 17.1375V9.87225Z" fill="white"/>
+                    </g>
+                  </svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="proyectos_cards_card flex">
+              <img src="" alt="hola" height="293px" loading="lazy" style="background-color: #D9D9D9;">
+              <div class="proyectos_cards_card_content flex">
+                <div class="proyectos_cards_card_titles flex">
+                  <h3>Próximamente</h3>
+                  <p>Nuevo proyecto en proceso</p>
+                </div>
+                <button>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <mask id="mask0_123_237" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                      <rect width="24" height="24" fill="#D9D9D9"/>
+                    </mask>
+                    <g mask="url(#mask0_123_237)">
+                      <path d="M15.9223 9.87225L7.25556 18.5393C7.04023 18.7544 6.77498 18.861 6.45981 18.859C6.14464 18.857 5.87948 18.7484 5.66431 18.5332C5.44898 18.3179 5.34131 18.0517 5.34131 17.7345C5.34131 17.4173 5.44898 17.1511 5.66431 16.9358L14.3251 8.275H7.05981C6.74064 8.275 6.47131 8.16525 6.25181 7.94575C6.03214 7.72608 5.92231 7.45667 5.92231 7.1375C5.92231 6.81833 6.03214 6.54892 6.25181 6.32925C6.47131 6.10975 6.74064 6 7.05981 6H17.0598C17.379 6 17.6484 6.10975 17.8681 6.32925C18.0876 6.54892 18.1973 6.81833 18.1973 7.1375V17.1375C18.1973 17.4567 18.0876 17.7261 17.8681 17.9458C17.6484 18.1652 17.379 18.275 17.0598 18.275C16.7406 18.275 16.4713 18.1652 16.2518 17.9458C16.0321 17.7261 15.9223 17.4567 15.9223 17.1375V9.87225Z" fill="white"/>
+                    </g>
+                  </svg>
+                </button>
+              </div>
+            </article>
+          </section>
+        </section>
+    </main>
+
+    <footer class="principal">
+      <div class="footer_content flex">
+        <div class="footer_content_contacto flex">
+          <svg xmlns="http://www.w3.org/2000/svg" width="72" height="57" viewBox="0 0 72 57" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.30322 43.5935C11.9572 40.8128 11.8122 35.2692 8.01778 32.6834C-3.03013 25.1544 -2.57885 8.71795 8.86555 1.80656L11.857 -4.68869e-07L17.8678 9.95322L14.8764 11.7598C10.6825 14.2926 10.5171 20.3159 14.5657 23.075C24.9199 30.1311 25.3156 45.2585 15.3446 52.8464L10.6704 56.4035L3.62897 47.1506L8.30322 43.5935Z" fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M33.0115 43.5935C36.6655 40.8128 36.5205 35.2692 32.726 32.6834C21.6781 25.1544 22.1294 8.71795 33.5738 1.80656L36.5653 -4.68869e-07L42.5761 9.95322L39.5847 11.7598C35.3907 14.2926 35.2254 20.3159 39.274 23.075C49.6281 30.1311 50.0239 45.2585 40.0529 52.8464L35.3786 56.4035L28.3372 47.1506L33.0115 43.5935Z" fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M57.7198 43.5935C61.3738 40.8128 61.2287 35.2692 57.4343 32.6834C46.3864 25.1544 46.8377 8.71795 58.2821 1.80656L61.2735 -4.68869e-07L67.2844 9.95322L64.2929 11.7598C60.099 14.2926 59.9336 20.3159 63.9823 23.075C74.3364 30.1311 74.7322 45.2585 64.7612 52.8464L60.0869 56.4035L53.0455 47.1506L57.7198 43.5935Z" fill="white"/>
+          </svg>
+          <div class="flex footer_content_contacto_links">
+            <div class="footer_content_contacto_link flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <mask id="mask0_123_301" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                  <rect width="24" height="24" fill="#D9D9D9"/>
+                </mask>
+                <g mask="url(#mask0_123_301)">
+                  <path d="M19.962 21.2034C17.8547 21.2034 15.7724 20.7442 13.7152 19.8259C11.6579 18.9075 9.78398 17.6051 8.09348 15.9186C6.40282 14.228 5.0984 12.353 4.18023 10.2939C3.2619 8.23471 2.80273 6.15146 2.80273 4.04413C2.80273 3.68829 2.92065 3.39146 3.15648 3.15363C3.39232 2.91579 3.68815 2.79688 4.04398 2.79688H8.08798C8.41298 2.79688 8.69107 2.89296 8.92224 3.08513C9.1534 3.27729 9.29765 3.52363 9.35499 3.82413L9.99898 7.19838C10.0482 7.52488 10.0408 7.80171 9.97698 8.02888C9.91298 8.25604 9.7904 8.45421 9.60923 8.62337L7.14823 11.0256C7.46573 11.5985 7.84165 12.1565 8.27598 12.6996C8.71048 13.2428 9.19473 13.773 9.72873 14.2904C10.2256 14.787 10.7374 15.2423 11.2642 15.6561C11.7909 16.07 12.3431 16.4442 12.9207 16.7789L15.3125 14.4051C15.5063 14.2151 15.744 14.0787 16.0255 13.9959C16.307 13.9129 16.5943 13.896 16.8875 13.9451L20.176 14.6274C20.4932 14.7179 20.7437 14.8715 20.9275 15.0884C21.1113 15.3052 21.2032 15.5639 21.2032 15.8644V19.9561C21.2032 20.312 21.0843 20.6088 20.8465 20.8466C20.6087 21.0845 20.3138 21.2034 19.962 21.2034Z" fill="white"/>
+                </g>
+              </svg>
+              <a href="mailto:contacto@sybellasandoval.cl">contacto@sybellasandoval.cl</a>
+            </div>
+            <div class="footer_content_contacto_link flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                <mask id="mask0_123_296" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="24">
+                  <rect x="0.5" width="24" height="24" fill="#D9D9D9"/>
+                </mask>
+                <g mask="url(#mask0_123_296)">
+                  <path d="M4.57175 20.2034C3.94209 20.2034 3.4055 19.9816 2.962 19.5381C2.5185 19.0946 2.29675 18.558 2.29675 17.9284V6.07187C2.29675 5.44221 2.5185 4.90562 2.962 4.46212C3.4055 4.01862 3.94209 3.79688 4.57175 3.79688H20.4283C21.0579 3.79688 21.5945 4.01862 22.038 4.46212C22.4815 4.90562 22.7033 5.44221 22.7033 6.07187V17.9284C22.7033 18.558 22.4815 19.0946 22.038 19.5381C21.5945 19.9816 21.0579 20.2034 20.4283 20.2034H4.57175ZM12.5 13.0524C12.5993 13.0524 12.7008 13.0379 12.8043 13.0089C12.9079 12.9799 13.0074 12.9364 13.1028 12.8784L19.9925 8.53112C20.1297 8.44779 20.2366 8.33763 20.3133 8.20063C20.3899 8.06363 20.4283 7.91221 20.4283 7.74637C20.4283 7.38904 20.2737 7.11813 19.9645 6.93363C19.6552 6.74896 19.3366 6.75829 19.0088 6.96163L12.5 11.0719L5.99125 6.96163C5.66742 6.76229 5.34984 6.75512 5.0385 6.94012C4.72734 7.12512 4.57175 7.39387 4.57175 7.74637C4.57175 7.92887 4.61009 8.08763 4.68675 8.22263C4.76342 8.35763 4.87034 8.46046 5.0075 8.53112L11.8973 12.8784C11.9926 12.9364 12.0921 12.9799 12.1958 13.0089C12.2993 13.0379 12.4007 13.0524 12.5 13.0524Z" fill="white"/>
+                </g>
+              </svg>
+              <a href="tel:+56928807037">+56 9 2880 7037</a>
+            </div>
+          </div>
+        </div>
+
+        <ul class="footer_content_nav flex">
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li>                    <div class="btn_principal flex white">
+            <a href="#contacto" class="t-black">Hablemos</a>
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+              <mask id="mask0_73_343" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="24">
+                <rect x="0.5" width="24" height="24" fill="#D9D9D9"></rect>
+              </mask>
+              <g mask="url(#mask0_73_343)">
+                <path d="M16.4223 9.87226L7.75556 18.5393C7.54023 18.7544 7.27498 18.861 6.95981 18.859C6.64464 18.857 6.37948 18.7484 6.16431 18.5333C5.94898 18.3179 5.84131 18.0517 5.84131 17.7345C5.84131 17.4173 5.94898 17.1511 6.16431 16.9358L14.8251 8.27501H7.55981C7.24064 8.27501 6.97131 8.16526 6.75181 7.94576C6.53214 7.7261 6.42231 7.45668 6.42231 7.13751C6.42231 6.81834 6.53214 6.54893 6.75181 6.32926C6.97131 6.10976 7.24064 6.00001 7.55981 6.00001H17.5598C17.879 6.00001 18.1484 6.10976 18.3681 6.32926C18.5876 6.54893 18.6973 6.81834 18.6973 7.13751V17.1375C18.6973 17.4567 18.5876 17.7261 18.3681 17.9458C18.1484 18.1653 17.879 18.275 17.5598 18.275C17.2406 18.275 16.9713 18.1653 16.7518 17.9458C16.5321 17.7261 16.4223 17.4567 16.4223 17.1375V9.87226Z" fill="#282828"></path>
+              </g>
+            </svg>
+            
+        </div>
+      </li>
+        </ul>
+      </div>
+      <hr>
+      <p class="footer_content_creditos t-white">
+       Diseñado y desarrollado por mí ❤️ | © Sybella Sandoval 2024. Todos los derechos reservados.
+      </p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="assets\js\script.js" defer></script>
 </body>
 </html>
 
