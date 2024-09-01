@@ -78,14 +78,14 @@ h2{
 @font-face {
     font-family: 'Libre Caslon Text';
     font-style: normal;
-    src: url("../fonts/LibreCaslonText-Regular.woff2") format('woff2');
+    src: url("/assets/fonts/LibreCaslonText-Regular.woff2") format('woff2');
     font-display: swap;
 }
 @font-face {
     font-family: 'Libre Caslon Text';
     font-style:normal;
     font-weight: bold;
-    src: url("fonts/LibreCaslonText-Bold.woff2") format('woff2');
+    src: url("/assets/fonts/LibreCaslonText-Bold.woff2") format('woff2');
     font-display: swap;
 }
 @font-face {
@@ -99,14 +99,14 @@ h2{
     font-family: 'Libre Franklin';
     font-style:normal;
     font-weight: 500;
-    src: url('fonts/LibreFranklin-Medium.woff2') format('woff2');
+    src: url("/assets/fonts/LibreFranklin-Medium.woff2") format('woff2');
     font-display: swap;
 }
 @font-face {
     font-family: 'Libre Franklin';
     font-style:normal;
     font-weight: 600;
-    src: url('fonts/LibreFranklin-SemiBold.woff2') format('woff2');
+    src: url("/assets/fonts/LibreFranklin-SemiBold.woff2") format('woff2');
     font-display: swap;
 }
 
