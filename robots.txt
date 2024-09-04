@@ -1,0 +1,17 @@
+User-agent: *
+Disallow:
+Disallow: //pdf$
+Allow: /
+Allow:
+
+# No rastrear copias de seguridad
+Disallow: /*.git$
+Disallow: /*.sql$
+Disallow: /*.tgz$
+Disallow: /*.gz$
+Disallow: /*.tar$
+Disallow: /*.svn$
+Disallow: /*.bz2$
+Disallow: /*.log$
+
+Sitemap: www.sybellasandoval.cl/sitemap.xml
